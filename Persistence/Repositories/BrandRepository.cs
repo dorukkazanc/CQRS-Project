@@ -1,0 +1,20 @@
+﻿using Application.Features.Brands.Commands.Create;
+using Application.Services.Repositories;
+using Core.Persistence.Repositories;
+using Domain.Entities;
+using Persistence.Contexts;
+
+namespace Persistence.Repositories
+{
+    public class BrandRepository : EfRepositoryBase<Brand, Guid, BaseDbContext>, IBrandRepository
+    {
+        public BrandRepository(BaseDbContext context) : base(context)
+        {
+        }
+
+        public Task<CreatedBrandResponse> Create(CreateBrandCommand createBrandCommand)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
